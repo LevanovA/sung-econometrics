@@ -1,6 +1,11 @@
 .title {
-    font-size: 34px;
-    line-height: 44px;
+    font-size: 32px;
+    line-height: 45px;
     font-weight: bold;
     color: $c-text-main;
+
+    @include phones__768 {
+        font-size: 26px;
+        line-height: 38px;
+    }
 }

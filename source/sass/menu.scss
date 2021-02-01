@@ -23,9 +23,9 @@
 .menu__logo {
     margin-right: 50px;
 
-    //@include tablets_950 {
-    //    margin-right: 20px;
-    //}
+    @include phones__768 {
+        margin-right: 20px;
+    }
 
     @include phones__480 {
         margin-right: 10px;
@@ -38,6 +38,8 @@
     align-items: center;
     flex-grow: 1;
     height: 100%;
+    margin: 0;
+    padding: 0;
 
     @include desktop_1366 {
         flex-direction: column;
@@ -69,22 +71,23 @@
         flex-grow: 1;
     }
 
-    //@include tablets_950 {
-    //    display: none;
-    //    position: absolute;
-    //    top: 100px;
-    //    left: 0;
-    //    z-index: 10;
-    //    width: 100%;
-    //    background-color: #ffffff;
-    //}
+    @include phones__768 {
+        display: none;
+        position: absolute;
+        top: 119px;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        padding-left: 20px;
+        background-color: $c-bg-header;
+    }
 }
 
 .menu__user {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 60px;
+    margin-left: 40px;
 
     @include tablets_1024 {
         margin-left: 10px;
@@ -110,13 +113,6 @@
     @include tablets_1024 {
         display: block;
         height: auto;
-    }
-
-    &:first-child {
-
-        @include phones__768 {
-            padding-top: 10px;
-        }
     }
 
     &:last-child {
@@ -160,6 +156,10 @@
         top: auto;
         left: auto;
     }
+
+    @include phones__768 {
+        padding: 0;
+    }
 }
 
 .menu__subitem {
@@ -179,8 +179,8 @@
 .menu__link {
     display: flex;
     align-items: center;
-    font-family: $font-second;
-    font-size: 14px;
+    font-family: $font-main;
+    font-size: 16px;
     line-height: 21px;
     color: $c-text-main;
     text-decoration: none;
@@ -194,18 +194,10 @@
         }
     }
 
-    @media screen and (max-width: 1445px) {
-        font-size: 12px;
-        line-height: 18px;
-    }
-
-    @include desktop_1366 {
-        font-size: 14px;
-        line-height: 21px;
-    }
-
     @include tablets_1024 {
         justify-content: center;
+        font-size: 14px;
+        line-height: 21px;
     }
 
     &.active {
@@ -239,7 +231,6 @@
 
 .menu__languages {
     display: flex;
-    border: 1px solid #8D848A
 }
 
 .menu__language {
@@ -251,14 +242,21 @@
     text-decoration: none;
     transition: 0.5s;
 
+    &:first-child {
+        padding-right: 8px;
+        border-right: 1px solid $c-text-main;
+    }
+
+    &:last-child {
+        padding-left: 8px;
+    }
+
     &.active {
-        color: #ffffff;
-        background-color: #8D848A;
+        color: $c-link-main;
     }
 
     &:hover {
-        color: #ffffff;
-        background-color: #8D848A;
+        color: $c-link-hover;
     }
 }
 

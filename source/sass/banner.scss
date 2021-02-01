@@ -1,0 +1,98 @@
+.banner {
+    background-color: $c-bg-banner;
+    border-top: 2px solid $c-border;
+    border-bottom: 2px solid $c-border;
+}
+
+.banner__issn {
+    margin-bottom: 100px;
+    padding-top: 100px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include tablets_1024 {
+        margin-bottom: 50px;
+        padding-top: 50px;
+    }
+}
+
+.banner__red {
+    color: $c-link-main;
+}
+
+.banner__flex {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 120px;
+
+    @include phones__768 {
+        flex-direction: column;
+    }
+}
+
+.banner__el {
+
+    &:first-child {
+        flex-grow: 1;
+        margin-right: 50px;
+
+        @include phones__768 {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    &:last-child {
+        flex-shrink: 0;
+    }
+}
+
+.banner__title {
+    margin-bottom: 48px;
+    font-family: $font-second;
+    font-size: 60px;
+    line-height: 54px;
+    text-transform: uppercase;
+
+    @include desktop_1200 {
+        font-size: 45px;
+    }
+
+    @include phones__768 {
+        font-size: 34px;
+        line-height: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+.banner__description {
+    max-width: 885px;
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 29px;
+
+    @include tablets_1024 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.banner__link {
+    display: flex;
+    align-items: center;
+    font-family: $font-main;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: $c-link-main;
+    transition: 0.5s;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.icon-book {
+    margin-right: 15px;
+}
+

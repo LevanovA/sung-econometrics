@@ -1,0 +1,32 @@
+.demands {
+    max-width: 594px;
+    padding: 54px 36px;
+    background-color: #ffffff;
+    border: 2px solid #F9F9F9;
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.04);
+}
+
+.demands__description {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @include phones__768 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.demands__link {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 24px;
+    color: $c-text-main;
+
+    &:nth-child(2) {
+        margin-bottom: 20px;
+    }
+}
