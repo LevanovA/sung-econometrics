@@ -1,0 +1,24 @@
+.indexing {
+    border-bottom: 2px solid $c-element-main;
+}
+
+.indexing__flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+
+    @include phones__480 {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+.indexing__img {
+    margin-right: 60px;
+    margin-bottom: 40px;
+
+    @include phones__768 {
+        height: 15px;
+        width: auto;
+    }
+}
